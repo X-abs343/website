@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Your Name - Personal Website</title>
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    // Get the TV element
+    const tv = document.getElementById('tv');
+
+    // Get the Xbox controller buttons
+    const xboxControllerButtons = document.querySelectorAll('.xbox-controller-button');
+
+    // Add an event listener to each Xbox controller button
+    xboxControllerButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Zoom in to the TV
+        tv.classList.add('zoomed-in');
+
+        // Open the corresponding tab
+        const tab = document.getElementById(button.dataset.tab);
+        tab.classList.add('active');
+      });
+    });
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Personal Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <!-- Content for the About section goes here -->
-    </section>
-    <section id="resume">
-        <!-- Content for the Resume section goes here -->
-    </section>
-    <section id="portfolio">
-        <!-- Content for the Portfolio section goes here -->
-    </section>
-    <section id="blog">
-        <!-- Content for the Personal Blog section goes here -->
-    </section>
+
+  <header>
+    <h1>My Personal Website</h1>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+
+      <div id="about">
+        </div>
+
+      <div id="resume">
+        </div>
+
+      <div id="portfolio">
+        </div>
+
+      <div id="blog">
+        </div>
+    </div>
+  </main>
+
 </body>
 </html>
